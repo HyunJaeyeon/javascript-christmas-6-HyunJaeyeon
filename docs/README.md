@@ -112,3 +112,5 @@
 `[Test]`
 
 - [ ] 테스트 코드 작성
+  - [x] OrdertestTest.js
+  - [x] MenuInformationTest.js
