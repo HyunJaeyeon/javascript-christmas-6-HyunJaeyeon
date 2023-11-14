@@ -4,7 +4,7 @@ import INPUT_MESSAGE from '../constants/inputMessage.js';
 const InputView = {
   async readDate() {
     const date = await Console.readLineAsync(INPUT_MESSAGE.DATE);
-    return date;
+    return Number(date);
   },
 
   async readOrder() {
