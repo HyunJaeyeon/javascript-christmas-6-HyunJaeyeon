@@ -1,11 +1,14 @@
 import MENU from '../constants/menu.js';
+import { isKeyExist } from './utils.js';
+import { checkMenu } from '../view/validation.js';
 
-// 메뉴이름 넣으면 카테고리와 속성을 찾아줌
 function getMenuInformation(name) {
-  const category = Object.keys(MENU).find((key) =>
-    Object.hasOwn(MENU[key], name),
-  );
+  const category = Object.keys(MENU).find((key) => isKeyExist(MENU[key], name));
+
+  checkMenu.isNotExist(category);
+
   const property = MENU[category][name];
+
   return { category, property };
 }
 

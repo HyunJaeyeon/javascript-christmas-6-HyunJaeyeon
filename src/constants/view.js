@@ -10,6 +10,7 @@ const ORDER = {
     '주문하실 메뉴를 메뉴와 개수를 알려 주세요. (e.g. 해산물파스타-2,레드와인-1,초코케이크-1)',
   ERROR_MESSAGE: '[ERROR] 유효하지 않은 주문입니다. 다시 입력해 주세요.',
   MAX_NUMBER: 20,
+  NOT_ONLY_CATEGORY: 'Beverage',
 };
 
 export { DATE, ORDER };

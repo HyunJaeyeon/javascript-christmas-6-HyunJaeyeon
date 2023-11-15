@@ -20,7 +20,6 @@ describe('주문 입력 후 형식에 맞춰 객체에 저장', () => {
 
     // when
     const myOrders = new MyOrders(INPUT_LINE);
-    myOrders.addList();
 
     // then
     const result = myOrders.list;
