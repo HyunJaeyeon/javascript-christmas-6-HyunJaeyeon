@@ -8,6 +8,7 @@ class MyOrders {
     this.list = {};
     this.#line = line.split(',');
     this.#addList();
+    this.#getTotalPrice();
   }
 
   #addMenu(line) {
@@ -25,6 +26,25 @@ class MyOrders {
     this.#line.forEach((line) => this.#addMenu(line));
 
     checkMenu.isOnlyCategory(this.list);
+  }
+
+  #getCategoryTotal(category) {
+    const categoryTotal = Object.values(this.list[category]).reduce(
+      (acc, menu) => acc + menu.price * menu.quantity,
+      0,
+    );
+    return categoryTotal;
+  }
+
+  #getTotalPrice() {
+    this.totalPrice = Object.keys(this.list).reduce(
+      (acc, category) => acc + this.#getCategoryTotal(category),
+      0,
+    );
+  }
+
+  getGift() {
+    if (this.totalPrice > 120000) this.gift = ['샴페인', 25000];
   }
 }
 

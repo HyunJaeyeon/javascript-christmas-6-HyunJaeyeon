@@ -6,5 +6,3 @@ const CheckNumber = {
 const isKeyExist = (category, name) => Object.hasOwn(category, name);
 
 export { CheckNumber, isKeyExist };
-
-console.log(isKeyExist('Beverage', '제로콜라'));

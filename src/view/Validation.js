@@ -22,9 +22,11 @@ const checkMenu = {
   isExist(category, name) {
     if (isKeyExist(category, name)) throw new Error(ORDER.ERROR_MESSAGE);
   },
+
   isNotExist(input) {
     if (!input) throw new Error(ORDER.ERROR_MESSAGE);
   },
+
   isOnlyCategory(list) {
     if (
       Object.keys(list).length === 1 &&
@@ -34,5 +36,3 @@ const checkMenu = {
   },
 };
 export { checkDate, checkMenu };
-
-checkMenu.isExist('Beverage', '제로콜라');
