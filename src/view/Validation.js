@@ -1,11 +1,11 @@
-import { DATE } from '../constants/view.js';
+import { DATE, ORDER } from '../constants/view.js';
 
-export const CheckNumber = {
+const CheckNumber = {
   isNotValid: (input) => Number.isNaN(input) || input < 1,
   isNotInRange: (input, max) => input > max,
 };
 
-function CheckDate(input) {
+function checkDate(input) {
   if (
     CheckNumber.isNotValid(input) ||
     CheckNumber.isNotInRange(input, DATE.MAX_NUMBER)
@@ -13,6 +13,13 @@ function CheckDate(input) {
     throw new Error(DATE.ERROR_MESSAGE);
 }
 
-export default CheckDate;
-// const result = CheckDate(Number('32'));
-// console.log(result);
+function checkQuantity(input) {
+  const numberInput = Number(input);
+  if (
+    CheckNumber.isNotValid(numberInput) ||
+    CheckNumber.isNotInRange(numberInput, ORDER.MAX_NUMBER)
+  )
+    throw new Error(ORDER.ERROR_MESSAGE);
+}
+
+export { CheckNumber, checkDate, checkQuantity };
