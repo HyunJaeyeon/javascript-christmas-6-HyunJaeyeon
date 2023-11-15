@@ -1,11 +1,10 @@
 import Order from '../controller/Order.js';
 
 class MyOrders {
-  list = {};
-
   #line;
 
   constructor(line) {
+    this.list = {};
     this.#line = line.split(',');
   }
 
