@@ -96,7 +96,7 @@
 
 `[Validation]`
 
-- [ ] 방문날짜 예외처리
+- [x] 방문날짜 예외처리
 - [ ] 메뉴-개수 예외처리
 
 `[Constant]`
@@ -115,3 +115,4 @@
   - [x] OrdertestTest.js
   - [x] MenuInformationTest.js
   - [x] MyOrders.js
+  - [ ] ValidationTest.js
