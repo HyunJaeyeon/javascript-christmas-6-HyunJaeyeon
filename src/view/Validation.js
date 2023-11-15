@@ -1,12 +1,18 @@
-// TODO: date를 string/number 로 받을지 생각
+import { DATE } from '../constants/view.js';
+
 export const CheckNumber = {
   isNotValid: (input) => Number.isNaN(input) || input < 1,
   isNotInRange: (input, max) => input > max,
 };
 
-function CheckDate(input, max) {
-  if (CheckNumber.isNotValid(input) || CheckNumber.isNotInRange(input, max))
-    throw new Error('[ERROR]');
+function CheckDate(input) {
+  if (
+    CheckNumber.isNotValid(input) ||
+    CheckNumber.isNotInRange(input, DATE.MAX_NUMBER)
+  )
+    throw new Error(DATE.ERROR_MESSAGE);
 }
 
 export default CheckDate;
+// const result = CheckDate(Number('32'));
+// console.log(result);

@@ -1,14 +1,14 @@
 import { Console } from '@woowacourse/mission-utils';
-import INPUT_MESSAGE from '../constants/inputMessage.js';
+import { DATE, ORDER } from '../constants/view.js';
 
 const InputView = {
-  async readDate() {
-    const date = await Console.readLineAsync(INPUT_MESSAGE.DATE);
+  readDate: async () => {
+    const date = await Console.readLineAsync(DATE.INPUT_MESSAGE);
     return Number(date);
   },
 
-  async readOrder() {
-    const order = await Console.readLineAsync(INPUT_MESSAGE.ORDER);
+  readOrder: async () => {
+    const order = await Console.readLineAsync(ORDER.INPUT_MESSAGE);
     return order;
   },
   // ...

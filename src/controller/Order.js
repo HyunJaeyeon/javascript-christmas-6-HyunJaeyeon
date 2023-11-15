@@ -1,5 +1,5 @@
 // 메뉴 확인
-import getMenuInformation from '../utils/MenuInformation.js';
+import getMenuInformation from '../utils/menuInformation.js';
 
 class Order {
   #menu = {};

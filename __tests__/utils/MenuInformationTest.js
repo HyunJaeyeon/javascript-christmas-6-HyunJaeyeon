@@ -1,4 +1,4 @@
-import getMenuInformation from '../../src/utils/MenuInformation';
+import getMenuInformation from '../../src/utils/menuInformation';
 
 describe('메뉴 이름 넣으면 메뉴판에서 해당 카테고리와 가격 속성을 찾아줌', () => {
   test('카테고리확인', async () => {

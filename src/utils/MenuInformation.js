@@ -1,4 +1,4 @@
-import MENU from '../constants/Menu.js';
+import MENU from '../constants/menu.js';
 
 // 메뉴이름 넣으면 카테고리와 속성을 찾아줌
 function getMenuInformation(name) {

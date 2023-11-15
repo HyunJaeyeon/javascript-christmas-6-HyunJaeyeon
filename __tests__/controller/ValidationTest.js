@@ -18,11 +18,11 @@ describe('숫자입력 유효 확인 테스트', () => {
   test.each([['32'], ['40']])('범위 내에 없으면 true', async (input) => {
     // given
     const INPUT_RETURN = Number(input);
-    const RANGE = 31;
+    const MAX = 31;
     const OUTPUT = true;
 
     // when
-    const result = CheckNumber.isNotInRange(INPUT_RETURN, RANGE);
+    const result = CheckNumber.isNotInRange(INPUT_RETURN, MAX);
     // then
     expect(result).toEqual(OUTPUT);
   });
@@ -34,11 +34,10 @@ describe('날짜 체크 테스트', () => {
     async (input) => {
       // given
       const INPUT_RETURN = Number(input);
-      const RANGE = 31;
-      const ERROR = '[ERROR]';
+      const ERROR = '[ERROR] 유효하지 않은 날짜입니다. 다시 입력해 주세요.';
 
       // when, then
-      expect(() => CheckDate(INPUT_RETURN, RANGE)).toThrow(ERROR);
+      expect(() => CheckDate(INPUT_RETURN)).toThrow(ERROR);
     },
   );
 });
