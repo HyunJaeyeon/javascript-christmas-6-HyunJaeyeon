@@ -80,7 +80,7 @@
 
 - [x] 방문날짜, 메뉴-개수 입력
   - [ ] 예외 처리 적용
-- [ ] 형태에 맞춰 출력
+- [ ] 형식에 맞게 출력
 
 `[Model]`
 
@@ -97,7 +97,7 @@
 `[Validation]`
 
 - [x] 방문날짜 예외처리
-- [ ] 메뉴-개수 예외처리
+- [x] 메뉴-개수 예외처리
 
 `[Constant]`
 
@@ -115,4 +115,4 @@
   - [x] OrdertestTest.js
   - [x] MenuInformationTest.js
   - [x] MyOrders.js
-  - [ ] ValidationTest.js
+  - [x] ValidationTest.js
